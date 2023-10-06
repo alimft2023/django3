@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import UserProfile
 
 # Create your views here.
 def addeducation(request):
@@ -17,7 +18,8 @@ def login(request):
     return render(request,'accounts/login.html',{})
 
 def profile(request):
-    return render(request,'accounts/profile.html',{})
+    userprofile=UserProfile.objects.get(id=2)
+    return render(request,'accounts/profile.html',{"userprofile":userprofile})
 
 def profiles(request):
     return render(request,'accounts/profiles.html',{})

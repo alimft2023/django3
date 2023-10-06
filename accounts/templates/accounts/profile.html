@@ -20,16 +20,7 @@
     <title>Welcome to the DevConnector</title>
   </head>
   <body>
-    <nav class="navbar bg-dark">
-      <h1>
-        <a href="dashboard.html"> <i class="fas fa-code"></i> DevConnector </a>
-      </h1>
-      <ul>
-        <li><a href="profiles.html">Developers</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+    {% include 'navbar.html' %}
     <section class="container">
       <a href="profiles.html" class="btn">Back To Profiles</a>
 
@@ -38,7 +29,7 @@
         <div class="profile-top bg-primary p-2">
           <img
             class="round-img my-1"
-            src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+            src="{{ userprofile.picture.url }}"
             alt=""
           />
 
